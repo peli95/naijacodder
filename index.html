@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Coloring Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎨 Meme Coloring Gallery</h1>
+            <p>Choose a meme sketch and bring it to life with colors!</p>
+        </header>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery-section">
+            <h2>Select a Meme to Color</h2>
+            <div class="gallery-grid">
+                <div class="meme-item" data-meme="drake">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8IS0tIERyYWtlIG1lbWUgc2tldGNoIC0tPgogIDxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPCEtLSBUb3AgcGFuZWwgLS0+CiAgPGxpbmUgeDE9IjAiIHkxPSIxMDAiIHgyPSIyMDAiIHkyPSIxMDAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPgogIDwhLS0gRHJha2UgZmFjZSAodG9wKSAtLT4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSIyMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPGNpcmNsZSBjeD0iNDUiIGN5PSI0NSIgcj0iMyIgZmlsbD0iYmxhY2siLz4KICA8Y2lyY2xlIGN4PSI1NSIgY3k9IjQ1IiByPSIzIiBmaWxsPSJibGFjayIvPgogIDxwYXRoIGQ9Ik00NSA1NSBRIDUwIDYwIDU1IDU1IiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiIGZpbGw9Im5vbmUiLz4KICA8IS0tIEhhbmQgKHRvcCkgLS0+CiAgPHBhdGggZD0iTTEwMCAzMCBMIDEyMCAyMCBMIDEzMCAzMCBMIDEyMCA0MCBaIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiIGZpbGw9Im5vbmUiLz4KICA8IS0tIERyYWtlIGZhY2UgKGJvdHRvbSkgLS0+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSIxNTAiIHI9IjIwIiBmaWxsPSJub25lIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8Y2lyY2xlIGN4PSI0NSIgY3k9IjE0NSIgcj0iMyIgZmlsbD0iYmxhY2siLz4KICA8Y2lyY2xlIGN4PSI1NSIgY3k9IjE0NSIgcj0iMyIgZmlsbD0iYmxhY2siLz4KICA8cGF0aCBkPSJNNDUgMTU1IFEgNTAgMTYwIDU1IDE1NSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIi8+CiAgPCEtLSBQb2ludGluZyBoYW5kIChib3R0b20pIC0tPgogIDxwYXRoIGQ9Ik0xMDAgMTMwIEwgMTQwIDEzMCBMIDE0NSAxMzUgTCAxNDAgMTQwIEwgMTAwIDE0MCBaIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiIGZpbGw9Im5vbmUiLz4KICA8dGV4dCB4PSIxMjAiIHk9IjcwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9ImJsYWNrIj5OTzwvdGV4dD4KICA8dGV4dCB4PSIxMjAiIHk9IjE3MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjEyIiBmaWxsPSJibGFjayI+WUVTPC90ZXh0Pgo8L3N2Zz4=" alt="Drake Meme">
+                    <h3>Drake Meme</h3>
+                </div>
+                
+                <div class="meme-item" data-meme="woman_cat">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8IS0tIFdvbWFuIHllbGxpbmcgYXQgY2F0IG1lbWUgc2tldGNoIC0tPgogIDxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMTUwIiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPCEtLSBEaXZpZGVyIC0tPgogIDxsaW5lIHgxPSIxMDAiIHkxPSIwIiB4Mj0iMTAwIiB5Mj0iMTUwIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8IS0tIFdvbWFuIGZhY2UgKGxlZnQpIC0tPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iNjAiIHI9IjI1IiBmaWxsPSJub25lIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8IS0tIEFuZ3J5IGV5ZXMgLS0+CiAgPGxpbmUgeDE9IjQwIiB5MT0iNTAiIHgyPSI0NSIgeTI9IjU1IiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8bGluZSB4MT0iNDUiIHkxPSI1MCIgeDI9IjQwIiB5Mj0iNTUiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPgogIDxsaW5lIHgxPSI1NSIgeTE9IjUwIiB4Mj0iNjAiIHkyPSI1NSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPGxpbmUgeDE9IjYwIiB5MT0iNTAiIHgyPSI1NSIgeTI9IjU1IiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8IS0tIE1vdXRoIC0tPgogIDxlbGxpcHNlIGN4PSI1MCIgY3k9IjcwIiByeD0iOCIgcnk9IjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPgogIDwhLS0gUG9pbnRpbmcgYXJtIC0tPgogIDxsaW5lIHgxPSI3NSIgeTE9IjcwIiB4Mj0iOTUiIHkyPSI3MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgPCEtLSBDYXQgKHJpZ2h0KSAtLT4KICA8IS0tIENhdCBib2R5IC0tPgogIDxlbGxpcHNlIGN4PSIxNTAiIGN5PSI4MCIgcng9IjMwIiByeT0iMjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPgogIDwhLS0gQ2F0IGhlYWQgLS0+CiAgPGNpcmNsZSBjeD0iMTUwIiBjeT0iNTAiIHI9IjE1IiBmaWxsPSJub25lIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8IS0tIENhdCBlYXJzIC0tPgogIDxwb2x5Z29uIHBvaW50cz0iMTM1LDQwIDE0MCwzMCAxNDUsNDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPgogIDxwb2x5Z29uIHBvaW50cz0iMTU1LDQwIDE2MCwzMCAxNjUsNDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPgogIDwhLS0gQ2F0IGV5ZXMgLS0+CiAgPGNpcmNsZSBjeD0iMTQ1IiBjeT0iNDciIHI9IjIiIGZpbGw9ImJsYWNrIi8+CiAgPGNpcmNsZSBjeD0iMTU1IiBjeT0iNDciIHI9IjIiIGZpbGw9ImJsYWNrIi8+CiAgPCEtLSBDYXQgbm9zZSAtLT4KICA8cG9seWdvbiBwb2ludHM9IjE0OCw1MiAxNTIsNTIgMTUwLDU0IiBmaWxsPSJibGFjayIvPgogIDwhLS0gQ2F0IG1vdXRoIC0tPgogIDxwYXRoIGQ9Ik0xNDUgNTYgUSAxNTAgNTggMTU1IDU2IiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiLz4KICA8IS0tIFRhYmxlIC0tPgogIDxsaW5lIHgxPSIxMjAiIHkxPSIxMDAiIHgyPSIxODAiIHkyPSIxMDAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4=" alt="Woman Yelling at Cat">
+                    <h3>Woman Yelling at Cat</h3>
+                </div>
+
+                <div class="meme-item" data-meme="distracted_boyfriend">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8IS0tIERpc3RyYWN0ZWQgYm95ZnJpZW5kIG1lbWUgc2tldGNoIC0tPgogIDxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMTUwIiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPCEtLSBCb3lmcmllbmQgKGNlbnRlcikgLS0+CiAgPGNpcmNsZSBjeD0iMTAwIiBjeT0iNDAiIHI9IjE1IiBmaWxsPSJub25lIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8ZWxsaXBzZSBjeD0iMTAwIiBjeT0iNzAiIHJ4PSIxMiIgcnk9IjIwIiBmaWxsPSJub25lIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8IS0tIEV5ZXMgbG9va2luZyByaWdodCAtLT4KICA8Y2lyY2xlIGN4PSIxMDIiIGN5PSIzNyIgcj0iMiIgZmlsbD0iYmxhY2siLz4KICA8Y2lyY2xlIGN4PSIxMDIiIGN5PSI0MyIgcj0iMiIgZmlsbD0iYmxhY2siLz4KICA8IS0tIEFybSBwb2ludGluZyAtLT4KICA8bGluZSB4MT0iMTEyIiB5MT0iNjAiIHgyPSIxNDAiIHkyPSI1MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgPCEtLSBHaXJsZnJpZW5kIChsZWZ0KSAtLT4KICA8Y2lyY2xlIGN4PSI0MCIgY3k9IjUwIiByPSIxMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPGVsbGlwc2UgY3g9IjQwIiBjeT0iNzUiIHJ4PSIxMCIgcnk9IjE4IiBmaWxsPSJub25lIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8IS0tIEFuZ3J5IGV4cHJlc3Npb24gLS0+CiAgPGxpbmUgeDE9IjM1IiB5MT0iNDUiIHgyPSI0MCIgeTI9IjUwIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8bGluZSB4MT0iNDAiIHkxPSI0NSIgeDI9IjQ1IiB5Mj0iNTAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPgogIDwhLS0gT3RoZXIgd29tYW4gKHJpZ2h0KSAtLT4KICA8Y2lyY2xlIGN4PSIxNjAiIGN5PSI2MCIgcj0iMTIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPgogIDxlbGxpcHNlIGN4PSIxNjAiIGN5PSI4NSIgcng9IjEwIiByeT0iMTgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPgogIDwhLS0gU21pbGluZyAtLT4KICA8Y2lyY2xlIGN4PSIxNTciIGN5PSI1NyIgcj0iMiIgZmlsbD0iYmxhY2siLz4KICA8Y2lyY2xlIGN4PSIxNjMiIGN5PSI1NyIgcj0iMiIgZmlsbD0iYmxhY2siLz4KICA8cGF0aCBkPSJNMTU1IDY1IFEgMTYwIDY4IDE2NSA2NSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIi8+Cjwvc3ZnPg==" alt="Distracted Boyfriend">
+                    <h3>Distracted Boyfriend</h3>
+                </div>
+
+                <div class="meme-item" data-meme="this_is_fine">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8IS0tIFRoaXMgaXMgZmluZSBkb2cgbWVtZSBza2V0Y2ggLS0+CiAgPHJlY3Qgd2lkdGg9IjIwMCIgaGVpZ2h0PSIxNTAiIGZpbGw9IndoaXRlIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8IS0tIERvZyBib2R5IC0tPgogIDxlbGxpcHNlIGN4PSI4MCIgY3k9IjgwIiByeD0iMjUiIHJ5PSIyMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPCEtLSBEb2cgaGVhZCAtLT4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSIxOCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPCEtLSBEb2cgZWFycyAtLT4KICA8ZWxsaXBzZSBjeD0iNDgiIGN5PSI1MCIgcng9IjgiIHJ5PSIxMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPGVsbGlwc2UgY3g9IjcyIiBjeT0iNTAiIHJ4PSI4IiByeT0iMTIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPgogIDwhLS0gRG9nIGV5ZXMgLS0+CiAgPGNpcmNsZSBjeD0iNTUiIGN5PSI1NyIgcj0iMyIgZmlsbD0iYmxhY2siLz4KICA8Y2lyY2xlIGN4PSI2NSIgY3k9IjU3IiByPSIzIiBmaWxsPSJibGFjayIvPgogIDwhLS0gRG9nIG5vc2UgLS0+CiAgPGVsbGlwc2UgY3g9IjYwIiBjeT0iNjUiIHJ4PSIzIiByeT0iMiIgZmlsbD0iYmxhY2siLz4KICA8IS0tIERvZyBtb3V0aCAtLT4KICA8cGF0aCBkPSJNNTUgNzAgUSA2MCA3MyA2NSA3MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIi8+CiAgPCEtLSBDb2ZmZWUgY3VwIC0tPgogIDxyZWN0IHg9Ijg1IiB5PSI3MCIgd2lkdGg9IjE1IiBoZWlnaHQ9IjIwIiBmaWxsPSJub25lIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8cGF0aCBkPSJNMTAwIDc1IEwgMTA1IDc1IiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiIGZpbGw9Im5vbmUiLz4KICA8IS0tIEZpcmUgZmxhbWVzIC0tPgogIDxwYXRoIGQ9Ik0xMjAgNDAgUSAxMjUgMzAgMTMwIDQwIFEgMTM1IDMwIDE0MCA0MCBRIDE0NSAzNSAxNTAgNDUiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIvPgogIDxwYXRoIGQ9Ik0xNDAgNjAgUSAxNDUgNTAgMTUwIDYwIFEgMTU1IDUwIDE2MCA2MCBRIDE2NSA1NSAxNzAgNjUiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIvPgogIDxwYXRoIGQ9Ik0xMTAgODAgUSAxMTUgNzAgMTIwIDgwIFEgMTI1IDcwIDEzMCA4MCBRIDEzNSA3NSAxNDAgODUiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIvPgogIDwhLS0gVGV4dCAtLT4KICA8dGV4dCB4PSIzMCIgeT0iMTMwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9ImJsYWNrIj5UaGlzIGlzIGZpbmUuPC90ZXh0Pgo8L3N2Zz4=" alt="This is Fine Dog">
+                    <h3>This is Fine</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Canvas Section -->
+        <section id="canvas-section" class="canvas-section hidden">
+            <div class="canvas-header">
+                <button id="back-btn" class="btn">← Back to Gallery</button>
+                <h2 id="canvas-title">Color Your Meme</h2>
+            </div>
+            
+            <div class="canvas-container">
+                <div class="canvas-wrapper">
+                    <canvas id="coloring-canvas" width="600" height="450"></canvas>
+                    <canvas id="sketch-canvas" width="600" height="450"></canvas>
+                </div>
+                
+                <div class="tools-panel">
+                    <div class="tool-group">
+                        <h3>Brush</h3>
+                        <input type="range" id="brush-size" min="2" max="20" value="10">
+                        <span id="brush-size-display">10px</span>
+                    </div>
+                    
+                    <div class="tool-group">
+                        <h3>Colors</h3>
+                        <div class="color-palette">
+                            <div class="color-option" data-color="#FF0000" style="background: #FF0000;"></div>
+                            <div class="color-option" data-color="#00FF00" style="background: #00FF00;"></div>
+                            <div class="color-option" data-color="#0000FF" style="background: #0000FF;"></div>
+                            <div class="color-option" data-color="#FFFF00" style="background: #FFFF00;"></div>
+                            <div class="color-option" data-color="#FF00FF" style="background: #FF00FF;"></div>
+                            <div class="color-option" data-color="#00FFFF" style="background: #00FFFF;"></div>
+                            <div class="color-option" data-color="#FFA500" style="background: #FFA500;"></div>
+                            <div class="color-option" data-color="#800080" style="background: #800080;"></div>
+                            <div class="color-option" data-color="#FFC0CB" style="background: #FFC0CB;"></div>
+                            <div class="color-option" data-color="#8B4513" style="background: #8B4513;"></div>
+                        </div>
+                        <input type="color" id="custom-color" value="#FF0000">
+                    </div>
+                    
+                    <div class="tool-group">
+                        <h3>Actions</h3>
+                        <button id="undo-btn" class="btn">Undo</button>
+                        <button id="clear-btn" class="btn">Clear All</button>
+                        <button id="download-btn" class="btn">Download</button>
+                        <button id="share-btn" class="btn">Share</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Payment Modal -->
+        <div id="payment-modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Remove Watermark</h2>
+                <p>Pay ₦500 to download your artwork without watermark</p>
+                <div class="payment-info">
+                    <div class="price">₦500</div>
+                    <button id="pay-btn" class="btn btn-primary">Pay with Paystack</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Share Modal -->
+        <div id="share-modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Share Your Artwork</h2>
+                <div class="share-preview">
+                    <canvas id="share-canvas" width="400" height="300"></canvas>
+                </div>
+                <div class="share-options">
+                    <button id="download-with-watermark" class="btn">Download with Watermark</button>
+                    <button id="remove-watermark-btn" class="btn btn-primary">Remove Watermark (₦500)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
