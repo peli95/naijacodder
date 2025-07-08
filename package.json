@@ -1,11 +1,11 @@
 {
   "name": "meme-coloring-gallery",
   "version": "1.0.0",
-  "description": "A web application for coloring meme sketches with payment integration",
-  "main": "index.html",
+  "description": "A web application for coloring meme sketches with payment integration - deployable as static site",
+  "main": "public/index.html",
   "scripts": {
-    "start": "npx http-server . -p 3000 -o",
-    "dev": "npx live-server --port=3000"
+    "dev": "cd public && npx http-server . -p 3000 -o",
+    "preview": "cd public && npx live-server --port=3000"
   },
   "keywords": [
     "meme",
@@ -14,7 +14,9 @@
     "drawing",
     "paystack",
     "javascript",
-    "html5"
+    "html5",
+    "static-site",
+    "vercel"
   ],
   "author": "Meme Coloring Gallery",
   "license": "MIT",
