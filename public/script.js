@@ -27,9 +27,18 @@ function initializeApp() {
 }
 
 function setupEventListeners() {
-    // Gallery items
-    document.querySelectorAll('.meme-item').forEach(item => {
-        item.addEventListener('click', () => selectMeme(item.dataset.meme));
+    // Gallery items - now using draw buttons instead of clicking cards
+    document.querySelectorAll('.draw-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const memeCard = btn.closest('.meme-card');
+            selectMeme(memeCard.dataset.meme);
+        });
+    });
+
+    // Filter buttons
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => filterMemes(btn.dataset.filter));
     });
 
     // Navigation
@@ -41,6 +50,11 @@ function setupEventListeners() {
     });
 
     document.getElementById('custom-color').addEventListener('change', (e) => {
+        selectColor(e.target.value);
+    });
+
+    // Custom color picker handling
+    document.querySelector('.color-picker').addEventListener('change', (e) => {
         selectColor(e.target.value);
     });
 
@@ -144,6 +158,12 @@ function selectColor(color) {
     
     // Update custom color picker
     document.getElementById('custom-color').value = color;
+    
+    // Update the new color picker if it exists
+    const colorPicker = document.querySelector('.color-picker');
+    if (colorPicker) {
+        colorPicker.value = color;
+    }
 }
 
 function selectDefaultColor() {
@@ -370,3 +390,26 @@ window.addEventListener('resize', resizeCanvasForMobile);
 
 // Initialize mobile responsive canvas
 resizeCanvasForMobile();
+
+// Filter functionality
+function filterMemes(category) {
+    // Update active filter button
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    document.querySelector(`[data-filter="${category}"]`).classList.add('active');
+
+    // Show/hide memes based on category
+    document.querySelectorAll('.meme-card').forEach(card => {
+        if (category === 'all') {
+            card.style.display = 'block';
+        } else {
+            const cardCategories = card.dataset.category.split(' ');
+            if (cardCategories.includes(category)) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        }
+    });
+}
