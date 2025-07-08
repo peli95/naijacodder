@@ -1,0 +1,773 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Mobile App Container */
+.app-container {
+    max-width: 100%;
+    min-height: 100vh;
+    background: #f5f5f5;
+}
+
+/* App Header */
+.app-header {
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+    color: white;
+    padding: 15px 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.app-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.app-title i {
+    font-size: 1.6rem;
+}
+
+.header-menu i {
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px;
+}
+
+/* Gallery Section */
+.gallery-section {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Stats Header */
+.stats-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+}
+
+.stat-card {
+    text-align: center;
+    flex: 1;
+}
+
+.stat-card.active .stat-number {
+    color: #4CAF50;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.stat-badge {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: #4CAF50;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Filter Container */
+.filter-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    overflow-x: auto;
+    padding: 5px 0;
+}
+
+.filter-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: white;
+    border: 2px solid #e0e0e0;
+    padding: 12px 16px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    min-width: fit-content;
+}
+
+.filter-btn.active {
+    background: #4CAF50;
+    border-color: #4CAF50;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.filter-btn:hover:not(.active) {
+    border-color: #4CAF50;
+    transform: translateY(-1px);
+}
+
+.filter-btn i {
+    font-size: 1rem;
+}
+
+/* Memes Grid */
+.memes-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* Meme Card */
+.meme-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.meme-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+.meme-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.meme-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    max-width: 180px;
+    max-height: 180px;
+}
+
+.meme-info {
+    padding: 20px;
+}
+
+.meme-info h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.meme-info p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.meme-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.difficulty {
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.difficulty.easy {
+    background: #E8F5E8;
+    color: #4CAF50;
+}
+
+.difficulty.medium {
+    background: #FFF3E0;
+    color: #FF9800;
+}
+
+.difficulty.hard {
+    background: #FFEBEE;
+    color: #F44336;
+}
+
+.draw-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.draw-btn:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}
+
+.draw-btn i {
+    font-size: 1rem;
+}
+
+/* Canvas Section */
+.canvas-section {
+    background: white;
+    min-height: 100vh;
+    position: relative;
+}
+
+.canvas-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background: #4CAF50;
+    color: white;
+}
+
+.back-btn {
+    background: rgba(255,255,255,0.2);
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+.canvas-header h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.info-btn {
+    background: rgba(255,255,255,0.2);
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+/* Drawing Container */
+.drawing-container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    background: #f8f8f8;
+}
+
+.canvas-wrapper {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    max-width: 100%;
+}
+
+#coloring-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: crosshair;
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100%;
+}
+
+#sketch-canvas {
+    position: relative;
+    z-index: 1;
+    pointer-events: none;
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100%;
+}
+
+/* Mobile Tools Panel */
+.mobile-tools {
+    background: white;
+    padding: 20px;
+    border-top: 1px solid #e0e0e0;
+    position: sticky;
+    bottom: 0;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Color Section */
+.color-section {
+    margin-bottom: 20px;
+}
+
+.color-palette {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 10px;
+    align-items: center;
+}
+
+.color-option {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 3px solid #ddd;
+    transition: all 0.2s ease;
+}
+
+.color-option:hover,
+.color-option.selected {
+    border-color: #4CAF50;
+    transform: scale(1.1);
+    box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+}
+
+.color-picker {
+    width: 35px;
+    height: 35px;
+    border: 3px solid #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0;
+    background: none;
+}
+
+.color-picker::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
+}
+
+/* Brush Section */
+.brush-section {
+    margin-bottom: 20px;
+}
+
+.brush-section label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #333;
+}
+
+.brush-section label i {
+    color: #4CAF50;
+    font-size: 1.1rem;
+}
+
+#brush-size {
+    width: 100%;
+    height: 6px;
+    border-radius: 5px;
+    background: #ddd;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+#brush-size::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+#brush-size::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+    border: none;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.tool-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    background: #f5f5f5;
+    border: 2px solid #e0e0e0;
+    padding: 12px 8px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #666;
+}
+
+.tool-btn:hover {
+    background: #f0f0f0;
+    border-color: #4CAF50;
+    transform: translateY(-2px);
+}
+
+.tool-btn.primary {
+    background: #4CAF50;
+    border-color: #4CAF50;
+    color: white;
+}
+
+.tool-btn.primary:hover {
+    background: #45a049;
+}
+
+.tool-btn i {
+    font-size: 1.2rem;
+}
+
+/* Modals */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(5px);
+}
+
+.modal.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.modal-header i {
+    color: #4CAF50;
+    font-size: 1.5rem;
+}
+
+.modal-header h2 {
+    color: #333;
+    font-size: 1.4rem;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+.close:hover {
+    color: #333;
+}
+
+.modal p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.payment-info {
+    margin-top: 20px;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.share-preview {
+    margin: 20px 0;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.share-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Button Styles */
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #f5f5f5;
+    color: #333;
+    border: 2px solid #e0e0e0;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn:hover {
+    background: #e0e0e0;
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: #4CAF50;
+    border-color: #4CAF50;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #45a049;
+    border-color: #45a049;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+}
+
+/* Hidden class */
+.hidden {
+    display: none !important;
+}
+
+/* Responsive Design */
+@media (min-width: 600px) {
+    .memes-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    
+    .app-container {
+        max-width: 500px;
+        margin: 0 auto;
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+    
+    body {
+        background: #e0e0e0;
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .app-header {
+        padding: 12px 15px;
+    }
+    
+    .header-content {
+        padding: 0;
+    }
+    
+    .gallery-section {
+        padding: 15px;
+    }
+    
+    .stats-header {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .stat-number {
+        font-size: 1.6rem;
+    }
+    
+    .filter-btn {
+        padding: 10px 12px;
+        font-size: 0.85rem;
+    }
+    
+    .meme-info {
+        padding: 15px;
+    }
+    
+    .mobile-tools {
+        padding: 15px;
+    }
+    
+    .color-palette {
+        grid-template-columns: repeat(8, 1fr);
+        gap: 8px;
+    }
+    
+    .color-option,
+    .color-picker {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .action-buttons {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+    }
+    
+    .tool-btn {
+        padding: 10px 6px;
+        font-size: 0.75rem;
+    }
+    
+    .modal-content {
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    .price {
+        font-size: 2rem;
+    }
+}
+
+/* Touch improvements */
+@media (hover: none) {
+    .meme-card:hover {
+        transform: none;
+    }
+    
+    .tool-btn:hover {
+        transform: none;
+    }
+    
+    .btn:hover {
+        transform: none;
+    }
+}
+
+/* Loading states */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #4CAF50;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Focus styles for accessibility */
+.filter-btn:focus,
+.draw-btn:focus,
+.tool-btn:focus,
+.btn:focus {
+    outline: 2px solid #4CAF50;
+    outline-offset: 2px;
+}
+
+/* Success animations */
+@keyframes successPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.success-animation {
+    animation: successPulse 0.6s ease-in-out;
+}
